@@ -14,5 +14,5 @@
     "autoload": {
         "psr-0": { "PHPOrchestra\\ThemeBundle": "" }
     },
-    "target-dir": "PHPOrchestra/ThemeBundle"
+    "target-dir": "PHPOrchestra"
 }
