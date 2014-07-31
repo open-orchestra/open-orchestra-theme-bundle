@@ -21,11 +21,10 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->arrayNode('themes')
+                    ->useAttributeAsKey('id')
                     ->prototype('array')
                         ->children()
-                            ->scalarNode('name')
-                                ->isRequired()
-                            ->end()
+                            ->scalarNode('name')->isRequired()->end()
                             ->arrayNode('stylesheets')
                                 ->prototype('scalar')->end()
                             ->end()
