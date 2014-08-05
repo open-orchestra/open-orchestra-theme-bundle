@@ -11,6 +11,14 @@
     "require": {
 
     },
+    "require-dev": {
+        "symfony/symfony": "~2.5",
+        "phpunit/phpunit" : "4.0.14",
+        "phake/phake": "*"
+    },
+    "config" : {
+        "bin-dir" : "bin"
+    },
     "autoload": {
         "psr-0": { "PHPOrchestra\\ThemeBundle": "" }
     },
