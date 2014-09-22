@@ -4,7 +4,6 @@ source_key: "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQ0KTUlJRW93SUJBQUtDQVFFQXV
 
 
 php:
-  - 5.3.3
   - 5.4
 
 before_script: 
