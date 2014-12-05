@@ -7,13 +7,19 @@
             "email": "nico.th4l@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/itkg/phporchestra-base-bundle"
+        }
+    ],
     "minimum-stability": "dev",
     "require": {
 
     },
     "require-dev": {
         "scrutinizer/ocular": "1.1.1",
-        "symfony/symfony": "~2.5",
+        "itkg/phporchestra-base-bundle": "dev-master",
         "phpunit/phpunit" : "4.0.14",
         "phake/phake": "*"
     },
