@@ -9,8 +9,11 @@ cache:
 php:
   - 5.4
 
-before_script: 
-  - composer install
+before_install:
+  - composer self-update
+
+install:
+  - composer install --prefer-dist --no-progress
 
 script: ./bin/phpunit
 
