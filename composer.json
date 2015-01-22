@@ -19,7 +19,7 @@
     },
     "require-dev": {
         "scrutinizer/ocular": "1.1.1",
-        "itkg/phporchestra-base-bundle": "dev-master",
+        "itkg/phporchestra-base-bundle": "*",
         "phpunit/phpunit" : "4.0.14",
         "phake/phake": "*"
     },
