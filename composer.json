@@ -1,5 +1,5 @@
 {
-    "name": "itkg/phporchestra-theme-bundle",
+    "name": "itkg/open-orchestra-theme-bundle",
     "license": "MIT",
     "authors": [
         {
@@ -19,7 +19,7 @@
     },
     "require-dev": {
         "scrutinizer/ocular": "1.1.1",
-        "itkg/phporchestra-base-bundle": "dev-master",
+        "itkg/open-orchestra-base-bundle": "dev-master",
         "phpunit/phpunit" : "4.0.14",
         "phake/phake": "*"
     },
@@ -27,7 +27,7 @@
         "bin-dir" : "bin"
     },
     "autoload": {
-        "psr-0": { "PHPOrchestra\\ThemeBundle": "" }
+        "psr-0": { "OpenOrchestra\\ThemeBundle": "" }
     },
-    "target-dir": "PHPOrchestra"
+    "target-dir": "OpenOrchestra"
 }

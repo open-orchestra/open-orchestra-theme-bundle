@@ -15,16 +15,16 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace PHPOrchestra\ThemeBundle\Test\Twig;
+namespace OpenOrchestra\ThemeBundle\Test\Twig;
 
-use \PHPOrchestra\ThemeBundle\Twig\PHPOrchestraExtension;
+use \OpenOrchestra\ThemeBundle\Twig\OpenOrchestraExtension;
 
 /**
- * Unit tests of PHPOrchestraExtension
+ * Unit tests of OpenOrchestraExtension
  *
  * @author Nicolas BOUQUET <nicolas.bouquet@businessdecision.com>
  */
-class PHPOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
+class OpenOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
@@ -38,7 +38,7 @@ class PHPOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
         $this->container = $this->getMock('\\Symfony\\Component\\DependencyInjection\\ContainerInterface');
         $this->container->expects($this->any())
                         ->method('getParameter')
-                        ->with('php_orchestra_theme.themes')
+                        ->with('open_orchestra_theme.themes')
                         ->will($this->returnValue($this->getFakeThemes()));
                         
         $this->container->expects($this->any())
@@ -46,7 +46,7 @@ class PHPOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
                         ->with('templating.helper.assets')
                         ->will($this->returnValue($mockTplHelper));
                         
-        $this->extension = new PHPOrchestraExtension($this->container);
+        $this->extension = new OpenOrchestraExtension($this->container);
     }
     
     
@@ -62,7 +62,7 @@ class PHPOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test PHPOrchestraExtension::phpOrchestraCss
+     * Test OpenOrchestraExtension::phpOrchestraCss
      * 
      * @dataProvider phpOrchestraCssJsData
      * 
@@ -79,7 +79,7 @@ class PHPOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test PHPOrchestraExtension::phpOrchestraJs
+     * Test OpenOrchestraExtension::phpOrchestraJs
      * 
      * @dataProvider phpOrchestraCssJsData
      * 

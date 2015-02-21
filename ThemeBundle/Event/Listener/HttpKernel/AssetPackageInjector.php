@@ -1,14 +1,14 @@
 <?php
 /**
- * This file is part of the PHPOrchestra\CMSBundle.
+ * This file is part of the OpenOrchestra\CMSBundle.
  *
  * @author Noël Gilain <noel.gilain@businessdecision.com>
  */
 
-namespace PHPOrchestra\ThemeBundle\Event\Listener\HttpKernel;
+namespace OpenOrchestra\ThemeBundle\Event\Listener\HttpKernel;
 
 use Symfony\Component\HttpKernel\Event\KernelEvent;
-use PHPOrchestra\ThemeBundle\Asset\Package\BundlePathPackage;
+use OpenOrchestra\ThemeBundle\Asset\Package\BundlePathPackage;
 
 class AssetPackageInjector
 {

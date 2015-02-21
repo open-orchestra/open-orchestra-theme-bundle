@@ -15,9 +15,9 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace PHPOrchestra\ThemeBundle\Test\DependencyInjection;
+namespace OpenOrchestra\ThemeBundle\Test\DependencyInjection;
 
-use \PHPOrchestra\ThemeBundle\DependencyInjection\Configuration;
+use \OpenOrchestra\ThemeBundle\DependencyInjection\Configuration;
 
 /**
  * Description of ConfigurationTest

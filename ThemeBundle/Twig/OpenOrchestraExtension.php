@@ -1,13 +1,13 @@
 <?php
 /**
- * This file is part of the PHPOrchestra\ThemeBundle.
+ * This file is part of the OpenOrchestra\ThemeBundle.
  *
  * @author Noël Gilain <noel.gilain@businessdecision.com>
  */
 
-namespace PHPOrchestra\ThemeBundle\Twig;
+namespace OpenOrchestra\ThemeBundle\Twig;
 
-class PHPOrchestraExtension extends \Twig_Extension
+class OpenOrchestraExtension extends \Twig_Extension
 {
     const FILETYPE_CSS = 'stylesheet';
     const FILETYPE_JS = 'javascript';
@@ -23,7 +23,7 @@ class PHPOrchestraExtension extends \Twig_Extension
     public function __construct($container)
     {
         $this->container = $container;
-        $this->themes = $this->container->getParameter('php_orchestra_theme.themes');
+        $this->themes = $this->container->getParameter('open_orchestra_theme.themes');
     }
 
     /**
