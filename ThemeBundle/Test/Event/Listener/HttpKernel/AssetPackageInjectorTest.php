@@ -15,9 +15,9 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace PHPOrchestra\ThemeBundle\Test\Event\Listener\HttpKernel;
+namespace OpenOrchestra\ThemeBundle\Test\Event\Listener\HttpKernel;
 
-use \PHPOrchestra\ThemeBundle\Event\Listener\HttpKernel\AssetPackageInjector;
+use \OpenOrchestra\ThemeBundle\Event\Listener\HttpKernel\AssetPackageInjector;
 
 /**
  * Description of AssetPackageInjectorTest
@@ -36,7 +36,7 @@ class AssetPackageInjectorTest extends \PHPUnit_Framework_TestCase
             ->method('addPackage')
             ->with(
                 $this->equalTo('bundleName'),
-                $this->isInstanceOf('\\PHPOrchestra\\ThemeBundle\\Asset\\Package\\BundlePathPackage')
+                $this->isInstanceOf('\\OpenOrchestra\\ThemeBundle\\Asset\\Package\\BundlePathPackage')
             );
         
         $bundles = array();

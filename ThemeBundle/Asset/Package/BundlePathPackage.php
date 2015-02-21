@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the PHPOrchestra\ThemeBundle.
+ * This file is part of the OpenOrchestra\ThemeBundle.
  *
  * Based on the work of andrewdevnotes
  * http://andrewdevnotes.blogspot.fr/2013/09/custom-asset-package-for-symfony2-app.html
@@ -8,7 +8,7 @@
  * @author Noël Gilain <noel.gilain@businessdecision.com>
  */
 
-namespace PHPOrchestra\ThemeBundle\Asset\Package;
+namespace OpenOrchestra\ThemeBundle\Asset\Package;
 
 use Symfony\Component\Templating\Asset\PathPackage;
 

@@ -15,16 +15,16 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace PHPOrchestra\ThemeBundle\Test\DependencyInjection;
+namespace OpenOrchestra\ThemeBundle\Test\DependencyInjection;
 
-use \PHPOrchestra\ThemeBundle\DependencyInjection\PHPOrchestraThemeExtension;
+use \OpenOrchestra\ThemeBundle\DependencyInjection\OpenOrchestraThemeExtension;
 
 /**
- * Description of PHPOrchestraThemeExtensionTest
+ * Description of OpenOrchestraThemeExtensionTest
  *
  * @author Noël GILAIN <noel.gilain@businessdecision.com>
  */
-class PHPOrchestraThemeExtensionTest extends \PHPUnit_Framework_TestCase
+class OpenOrchestraThemeExtensionTest extends \PHPUnit_Framework_TestCase
 {
     public function testLoad()
     {
@@ -40,7 +40,7 @@ class PHPOrchestraThemeExtensionTest extends \PHPUnit_Framework_TestCase
             ->method('addResource')
             ->with($this->isInstanceOf('\\Symfony\\Component\\Config\\Resource\\FileResource'));
         
-        $extension = new PHPOrchestraThemeExtension();
+        $extension = new OpenOrchestraThemeExtension();
         $extension->load($configs, $container);
     }
 }

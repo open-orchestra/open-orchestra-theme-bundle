@@ -15,9 +15,9 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace PHPOrchestra\ThemeBundle\Test\Asset\Package;
+namespace OpenOrchestra\ThemeBundle\Test\Asset\Package;
 
-use \PHPOrchestra\ThemeBundle\Asset\Package\BundlePathPackage;
+use \OpenOrchestra\ThemeBundle\Asset\Package\BundlePathPackage;
 
 /**
  * Unit tests of BundlePathPackage

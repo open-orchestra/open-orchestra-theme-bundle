@@ -15,10 +15,10 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace PHPOrchestra\ThemeBundle\Test\Form\Type;
+namespace OpenOrchestra\ThemeBundle\Test\Form\Type;
 
-use \PHPOrchestra\ThemeBundle\Form\Type\ThemeChoiceType;
-use \PHPOrchestra\CMSBundle\Test\Mock;
+use \OpenOrchestra\ThemeBundle\Form\Type\ThemeChoiceType;
+use \OpenOrchestra\CMSBundle\Test\Mock;
 
 /**
  * Description of ThemeChoiceTypeTest
