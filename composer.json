@@ -10,7 +10,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/itkg/phporchestra-base-bundle"
+            "url": "https://github.com/itkg/open-orchestra-base-bundle"
         }
     ],
     "minimum-stability": "dev",
