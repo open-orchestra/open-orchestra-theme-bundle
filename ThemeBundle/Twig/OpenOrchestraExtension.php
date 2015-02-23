@@ -34,13 +34,13 @@ class OpenOrchestraExtension extends \Twig_Extension
     {
         return array(
             new \Twig_SimpleFunction(
-                'phpOrchestraCss',
-                array($this, 'phpOrchestraCss'),
+                'openOrchestraCss',
+                array($this, 'openOrchestraCss'),
                 array('is_safe' => array('html'))
             ),
             new \Twig_SimpleFunction(
-                'phpOrchestraJs',
-                array($this, 'phpOrchestraJs'),
+                'openOrchestraJs',
+                array($this, 'openOrchestraJs'),
                 array('is_safe' => array('html'))
             )
         );
@@ -51,7 +51,7 @@ class OpenOrchestraExtension extends \Twig_Extension
      * 
      * @param string themeId
      */
-    public function phpOrchestraCss($themeId)
+    public function openOrchestraCss($themeId)
     {
         $tags = '';
         
@@ -70,7 +70,7 @@ class OpenOrchestraExtension extends \Twig_Extension
      * 
      * @param string themeId
      */
-    public function phpOrchestraJs($themeId)
+    public function openOrchestraJs($themeId)
     {
         $tags = '';
         
@@ -118,6 +118,6 @@ class OpenOrchestraExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'phporchestra_extension';
+        return 'open_orchestra_extension';
     }
 }

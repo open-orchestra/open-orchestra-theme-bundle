@@ -62,52 +62,52 @@ class OpenOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Test OpenOrchestraExtension::phpOrchestraCss
+     * Test OpenOrchestraExtension::openOrchestraCss
      * 
-     * @dataProvider phpOrchestraCssJsData
+     * @dataProvider openOrchestraCssJsData
      * 
      * @param string $themeId
      * @param string $expectedCssTag
      * @param string $expectedJsTag
      */
-    public function testPhpOrchestraCss($themeId, $expectedCss, $expectedJs)
+    public function testOpenOrchestraCss($themeId, $expectedCss, $expectedJs)
     {
         $this->assertEquals(
             $expectedCss,
-            $this->extension->phpOrchestraCss($themeId)
+            $this->extension->openOrchestraCss($themeId)
         );
     }
     
     /**
-     * Test OpenOrchestraExtension::phpOrchestraJs
+     * Test OpenOrchestraExtension::openOrchestraJs
      * 
-     * @dataProvider phpOrchestraCssJsData
+     * @dataProvider openOrchestraCssJsData
      * 
      * @param string $themeId
      * @param string $expectedCssTag
      * @param string $expectedJsTag
      */
-    public function testPhpOrchestraJs($themeId, $expectedCss, $expectedJs)
+    public function testOpenOrchestraJs($themeId, $expectedCss, $expectedJs)
     {
         $this->assertEquals(
             $expectedJs,
-            $this->extension->phpOrchestraJs($themeId)
+            $this->extension->openOrchestraJs($themeId)
         );
     }
     
     public function testGetName()
     {
         $this->assertEquals(
-            'phporchestra_extension',
+            'open_orchestra_extension',
             $this->extension->getName()
         );
     }
     
     /**
-     * Data provider for phpOrchestraCss and phpOrchestraJs
+     * Data provider for openOrchestraCss and openOrchestraJs
      * @return array
      */
-    public function phpOrchestraCssJsData()
+    public function openOrchestraCssJsData()
     {
         $dirSep = DIRECTORY_SEPARATOR;
         return array(
