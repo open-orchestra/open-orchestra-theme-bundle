@@ -10,13 +10,13 @@ services:
 
 #--[TWIG EXTENSIONS]-------------#
 
-    phporchestra_cms.twig.phporchestra_extension:
+    open_orchestra_cms.twig.open_orchestra_extension:
         class: OpenOrchestra\ThemeBundle\Twig\OpenOrchestraExtension
         arguments: [@service_container]
         tags:
             - { name: twig.extension }
 
-    phporchestra_cms.event.listener.assetpackage:
+    open_orchestra_cms.event.listener.assetpackage:
         class: OpenOrchestra\ThemeBundle\Event\Listener\HttpKernel\AssetPackageInjector
         tags:
             - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
