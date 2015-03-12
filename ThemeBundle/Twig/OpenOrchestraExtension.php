@@ -1,12 +1,10 @@
 <?php
-/**
- * This file is part of the OpenOrchestra\ThemeBundle.
- *
- * @author Noël Gilain <noel.gilain@businessdecision.com>
- */
 
 namespace OpenOrchestra\ThemeBundle\Twig;
 
+/**
+ * Class OpenOrchestraExtension
+ */
 class OpenOrchestraExtension extends \Twig_Extension
 {
     const FILETYPE_CSS = 'stylesheet';
@@ -50,6 +48,8 @@ class OpenOrchestraExtension extends \Twig_Extension
      * Return the html tags including the css from the theme
      * 
      * @param string themeId
+     *
+     * @return string
      */
     public function openOrchestraCss($themeId)
     {
@@ -69,6 +69,8 @@ class OpenOrchestraExtension extends \Twig_Extension
      * Return the html tags to include js files from the theme
      * 
      * @param string themeId
+      *
+      * @return string
      */
     public function openOrchestraJs($themeId)
     {
@@ -89,6 +91,8 @@ class OpenOrchestraExtension extends \Twig_Extension
      * 
      * @param string $file (bundleName:themeName:subpathToFile)
      * @param string $fileType
+     *
+     * @return string
      */
     protected function getHtmlTag($file, $fileType)
     {
@@ -113,7 +117,6 @@ class OpenOrchestraExtension extends \Twig_Extension
     }
 
     /**
-     * (non-PHPdoc)
      * @see src/symfony2/vendor/twig/twig/lib/Twig/Twig_ExtensionInterface::getName()
      */
     public function getName()
