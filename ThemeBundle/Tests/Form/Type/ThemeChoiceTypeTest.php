@@ -15,7 +15,7 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace OpenOrchestra\ThemeBundle\Test\Form\Type;
+namespace OpenOrchestra\ThemeBundle\Tests\Form\Type;
 
 use \OpenOrchestra\ThemeBundle\Form\Type\ThemeChoiceType;
 use \OpenOrchestra\CMSBundle\Test\Mock;

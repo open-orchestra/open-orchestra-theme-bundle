@@ -15,7 +15,7 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace OpenOrchestra\ThemeBundle\Test\DependencyInjection;
+namespace OpenOrchestra\ThemeBundle\Tests\DependencyInjection;
 
 use \OpenOrchestra\ThemeBundle\DependencyInjection\OpenOrchestraThemeExtension;
 

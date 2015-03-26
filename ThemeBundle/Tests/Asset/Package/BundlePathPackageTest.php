@@ -15,7 +15,7 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace OpenOrchestra\ThemeBundle\Test\Asset\Package;
+namespace OpenOrchestra\ThemeBundle\Tests\Asset\Package;
 
 use \OpenOrchestra\ThemeBundle\Asset\Package\BundlePathPackage;
 
