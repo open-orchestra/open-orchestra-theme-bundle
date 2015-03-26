@@ -15,7 +15,7 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace OpenOrchestra\ThemeBundle\Test\Twig;
+namespace OpenOrchestra\ThemeBundle\Tests\Twig;
 
 use \OpenOrchestra\ThemeBundle\Twig\OpenOrchestraExtension;
 

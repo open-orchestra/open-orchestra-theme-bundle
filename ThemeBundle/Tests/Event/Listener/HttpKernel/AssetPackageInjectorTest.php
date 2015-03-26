@@ -15,7 +15,7 @@
  * See LICENSE.txt file for the full LICENSE text.
  */
 
-namespace OpenOrchestra\ThemeBundle\Test\Event\Listener\HttpKernel;
+namespace OpenOrchestra\ThemeBundle\Tests\Event\Listener\HttpKernel;
 
 use \OpenOrchestra\ThemeBundle\Event\Listener\HttpKernel\AssetPackageInjector;
 
