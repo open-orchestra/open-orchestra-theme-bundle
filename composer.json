@@ -1,16 +1,10 @@
 {
-    "name": "itkg/open-orchestra-theme-bundle",
+    "name": "open-orchestra/open-orchestra-theme-bundle",
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "Nicolas Thal",
             "email": "nico.th4l@gmail.com"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/itkg/open-orchestra-base-bundle"
         }
     ],
     "minimum-stability": "dev",
@@ -19,7 +13,7 @@
     },
     "require-dev": {
         "scrutinizer/ocular": "1.1.1",
-        "itkg/open-orchestra-base-bundle": "dev-master",
+        "open-orchestra/open-orchestra-base-bundle": "dev-master",
         "phpunit/phpunit" : "4.0.14",
         "phake/phake": "*"
     },
