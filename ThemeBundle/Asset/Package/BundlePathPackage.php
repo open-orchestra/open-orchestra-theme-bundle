@@ -10,6 +10,8 @@ use Symfony\Component\Asset\Package;
  */
 class BundlePathPackage extends Package
 {
+    const THEMES_FOLDER = 'themes';
+
     /**
      * Bundle assets web directory
      *
@@ -24,7 +26,7 @@ class BundlePathPackage extends Package
     public function getUrl($path)
     {
         if (isset($this->bundleDir)) {
-            $path = '/' . $this->bundleDir . '/themes/' . ltrim($path, '/');
+            $path = '/' . $this->bundleDir . '/' . self::THEMES_FOLDER . '/' . ltrim($path, '/');
         }
 
         return parent::getUrl($path);
