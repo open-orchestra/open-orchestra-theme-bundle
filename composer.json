@@ -14,8 +14,8 @@
     "require-dev": {
         "scrutinizer/ocular": "1.1.1",
         "open-orchestra/open-orchestra-base-bundle": "dev-master",
-        "phpunit/phpunit" : "4.6.1",
-        "phake/phake": "2.0.2"
+        "phpunit/phpunit" : "4.7.0",
+        "phake/phake": "2.1.0"
     },
     "config" : {
         "bin-dir" : "bin"
