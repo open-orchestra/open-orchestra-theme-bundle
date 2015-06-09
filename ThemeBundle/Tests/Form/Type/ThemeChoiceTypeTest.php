@@ -1,35 +1,22 @@
 <?php
 
-/*
- * Business & Decision - Commercial License
- *
- * Copyright 2014 Business & Decision.
- *
- * All rights reserved. You CANNOT use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell this Software or any parts of this
- * Software, without the written authorization of Business & Decision.
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * See LICENSE.txt file for the full LICENSE text.
- */
-
 namespace OpenOrchestra\ThemeBundle\Tests\Form\Type;
 
-use \OpenOrchestra\ThemeBundle\Form\Type\ThemeChoiceType;
-use \OpenOrchestra\CMSBundle\Test\Mock;
+use OpenOrchestra\ThemeBundle\Form\Type\ThemeChoiceType;
+use Phake;
 
 /**
  * Description of ThemeChoiceTypeTest
- *
- * @author Nicolas BOUQUET <nicolas.bouquet@businessdecision.com>
  */
 class ThemeChoiceTypeTest extends \PHPUnit_Framework_TestCase
 {
+    protected $themeChoiceType;
+
+    /**
+     * Set up the test
+     */
     public function setUp()
     {
-        
         $themes = array(
             'themeId1' => array('name' => 'Dummy theme #1'),
             'themeId2' => array('name' => 'Dummy theme #2'),
@@ -37,7 +24,10 @@ class ThemeChoiceTypeTest extends \PHPUnit_Framework_TestCase
         
         $this->themeChoiceType = new ThemeChoiceType($themes);
     }
-    
+
+    /**
+     * Test set default options
+     */
     public function testSetDefaultOptions()
     {
         $choices = array(
@@ -45,22 +35,24 @@ class ThemeChoiceTypeTest extends \PHPUnit_Framework_TestCase
             'themeId2' => 'Dummy theme #2',
         );
         
-        $resolverMock =
-            $this->getMock('\\Symfony\\Component\\OptionsResolver\\OptionsResolverInterface');
+        $resolverMock = Phake::mock('Symfony\Component\OptionsResolver\OptionsResolver');
         
-        $resolverMock
-            ->expects($this->once())
-            ->method('setDefaults')
-            ->with($this->equalTo(array('choices' => $choices)));
-        
-        $this->themeChoiceType->setDefaultOptions($resolverMock);
+        $this->themeChoiceType->configureOptions($resolverMock);
+
+        Phake::verify($resolverMock)->setDefaults(array('choices' => $choices));
     }
-    
+
+    /**
+     * Test get parent
+     */
     public function testGetParent()
     {
         $this->assertEquals('choice', $this->themeChoiceType->getParent());
     }
 
+    /**
+     * Test name
+     */
     public function testGetName()
     {
         $this->assertEquals('orchestra_theme_choice', $this->themeChoiceType->getName());
