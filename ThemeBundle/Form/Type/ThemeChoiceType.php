@@ -1,19 +1,15 @@
 <?php
-/**
- * This file is part of the OpenOrchestra\ThemeBundle.
- *
- * @author Noël GILAIN <noel.gilain@businessdecision.com>
- */
 
 namespace OpenOrchestra\ThemeBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
+/**
+ * Class ThemeChoiceType
+ */
 class ThemeChoiceType extends AbstractType
 {
-
     public $choices = null;
 
     /**
@@ -27,13 +23,11 @@ class ThemeChoiceType extends AbstractType
             $this->choices[$themeId] = $theme['name'];
         }
     }
-    
+
     /**
-     * (non-PHPdoc)
-     * @see src/symfony2/vendor/symfony/symfony/src/Symfony/Component/Form/Symfony
-     * \Component\Form.AbstractType::setDefaultOptions()
+     * @param OptionsResolver $resolver
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(
             array(
@@ -43,9 +37,7 @@ class ThemeChoiceType extends AbstractType
     }
 
     /**
-     * (non-PHPdoc)
-     * @see src/symfony2/vendor/symfony/symfony/src/Symfony/Component/Form/Symfony
-     * \Component\Form.AbstractType::getParent()
+     * @return string
      */
     public function getParent()
     {
@@ -53,9 +45,7 @@ class ThemeChoiceType extends AbstractType
     }
 
     /**
-     * (non-PHPdoc)
-     * @see src/symfony2/vendor/symfony/symfony/src/Symfony/Component/Form/Symfony
-     * \Component\Form.FormTypeInterface::getName()
+     * @return string
      */
     public function getName()
     {
