@@ -36,7 +36,7 @@ class ThemeChoiceTypeTest extends \PHPUnit_Framework_TestCase
         );
         
         $resolverMock = Phake::mock('Symfony\Component\OptionsResolver\OptionsResolver');
-        
+
         $this->themeChoiceType->configureOptions($resolverMock);
 
         Phake::verify($resolverMock)->setDefaults(array('choices' => $choices));
