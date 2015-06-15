@@ -8,7 +8,7 @@ use Symfony\Component\Asset\Packages;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
- * Description of AssetPackageInjectorSubscriberTest
+ * AssetPackageInjectorSubscriberTest class
  */
 class AssetPackageInjectorSubscriberTest extends \PHPUnit_Framework_TestCase
 {

@@ -17,7 +17,7 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('open_orchestra_theme');
-        
+
         $rootNode
             ->children()
                 ->arrayNode('themes')
@@ -35,7 +35,7 @@ class Configuration implements ConfigurationInterface
                     ->end()
                 ->end()
             ->end();
-        
+
         return $treeBuilder;
     }
 }

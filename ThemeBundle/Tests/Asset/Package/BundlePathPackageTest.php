@@ -26,7 +26,7 @@ class BundlePathPackageTest extends \PHPUnit_Framework_TestCase
 
         $this->bundlePathPackage = new BundlePathPackage($this->versionStrategy);
     }
-    
+
     /**
      * @param string $expectedUrl
      * @param string $bundle
@@ -42,7 +42,7 @@ class BundlePathPackageTest extends \PHPUnit_Framework_TestCase
         Phake::when($this->versionStrategy)->applyVersion(Phake::anyParameters())->thenReturn($expectedUrl);
 
         $resultURL = $this->bundlePathPackage->getUrl($path);
-        
+
         $this->assertEquals($expectedUrl, $resultURL);
         Phake::verify($this->versionStrategy)->applyVersion($expectedUrl);
     }
@@ -60,7 +60,7 @@ class BundlePathPackageTest extends \PHPUnit_Framework_TestCase
             array('other/path/longer/',               null,          'other/path/longer/'),
         );
     }
-    
+
     /**
      * @param string $expectedBundlePath
      * @param string $bundle
@@ -70,13 +70,13 @@ class BundlePathPackageTest extends \PHPUnit_Framework_TestCase
     public function testSetBundlePath($expectedBundlePath, $bundle)
     {
         $this->bundlePathPackage->setBundlePath($bundle);
-        
+
         $this->assertEquals(
             $expectedBundlePath,
             $this->bundlePathPackage->getBundleDir()
         );
     }
-    
+
     /**
      * Data provider for setBundlePath
      * @return array

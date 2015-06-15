@@ -6,7 +6,7 @@ use OpenOrchestra\ThemeBundle\Form\Type\ThemeChoiceType;
 use Phake;
 
 /**
- * Description of ThemeChoiceTypeTest
+ * ThemeChoiceTypeTest class
  */
 class ThemeChoiceTypeTest extends \PHPUnit_Framework_TestCase
 {
@@ -21,7 +21,7 @@ class ThemeChoiceTypeTest extends \PHPUnit_Framework_TestCase
             'themeId1' => array('name' => 'Dummy theme #1'),
             'themeId2' => array('name' => 'Dummy theme #2'),
         );
-        
+
         $this->themeChoiceType = new ThemeChoiceType($themes);
     }
 
@@ -34,7 +34,7 @@ class ThemeChoiceTypeTest extends \PHPUnit_Framework_TestCase
             'themeId1' => 'Dummy theme #1',
             'themeId2' => 'Dummy theme #2',
         );
-        
+
         $resolverMock = Phake::mock('Symfony\Component\OptionsResolver\OptionsResolver');
 
         $this->themeChoiceType->configureOptions($resolverMock);
