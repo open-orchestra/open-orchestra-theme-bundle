@@ -6,7 +6,7 @@ use OpenOrchestra\ThemeBundle\Twig\OpenOrchestraExtension;
 use Phake;
 
 /**
- * Unit tests of OpenOrchestraExtension
+ * OpenOrchestraExtensionTest class
  */
 class OpenOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
 {
@@ -34,11 +34,11 @@ class OpenOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
     public function testGetFunctions()
     {
         $functions = $this->extension->getFunctions();
-        
+
         $this->assertCount(2, $functions);
         $this->assertContainsOnlyInstancesOf('Twig_SimpleFunction', $functions);
     }
-    
+
     /**
      * Test css balise creation
      */
@@ -52,7 +52,7 @@ class OpenOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
         );
         Phake::verify($this->assetsHelper)->getUrl('cssTheme/pathToFile1.css', 'otherBundle');
     }
-    
+
     /**
      * Test js link creation
      */

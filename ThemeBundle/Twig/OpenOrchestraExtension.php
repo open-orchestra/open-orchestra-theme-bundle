@@ -11,7 +11,7 @@ class OpenOrchestraExtension extends \Twig_Extension
 {
     const FILETYPE_CSS = 'stylesheet';
     const FILETYPE_JS = 'javascript';
-    
+
     protected $assetsHelper;
     protected $themes;
 
@@ -46,14 +46,14 @@ class OpenOrchestraExtension extends \Twig_Extension
     public function openOrchestraCss($themeId)
     {
         $tags = '';
-        
+
         if (isset($this->themes[$themeId]) && isset($this->themes[$themeId]['stylesheets'])) {
             $stylesheets = $this->themes[$themeId]['stylesheets'];
             foreach ($stylesheets as $stylesheet) {
                 $tags .= $this->getHtmlTag($stylesheet, self::FILETYPE_CSS);
             }
         }
-        
+
         return $tags;
     }
 
@@ -67,14 +67,14 @@ class OpenOrchestraExtension extends \Twig_Extension
     public function openOrchestraJs($themeId)
     {
         $tags = '';
-        
+
         if (isset($this->themes[$themeId]) && isset($this->themes[$themeId]['javascripts'])) {
             $javascripts = $this->themes[$themeId]['javascripts'];
             foreach ($javascripts as $javascript) {
                 $tags .= $this->getHtmlTag($javascript, self::FILETYPE_JS);
             }
         }
-        
+
         return $tags;
     }
 
@@ -89,7 +89,7 @@ class OpenOrchestraExtension extends \Twig_Extension
     protected function getHtmlTag($file, $fileType)
     {
         list($bundleName, $themeName, $filePath) = explode(':', $file);
-        
+
         $assetsPath = $this->assetsHelper->getUrl($themeName . DIRECTORY_SEPARATOR . $filePath, $bundleName);
 
         switch ($fileType) {
@@ -102,7 +102,7 @@ class OpenOrchestraExtension extends \Twig_Extension
             default:
                 $tag = '';
         }
-        
+
         return $tag;
     }
 
