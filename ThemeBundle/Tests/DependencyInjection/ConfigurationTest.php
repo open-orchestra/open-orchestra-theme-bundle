@@ -12,11 +12,11 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
     public function testGetConfigTreeBuilder()
     {
         $configuration = new Configuration();
-        $treebuilder   = $configuration->getConfigTreeBuilder();
+        $treeBuilder   = $configuration->getConfigTreeBuilder();
 
         $this->assertInstanceOf(
             '\\Symfony\\Component\\Config\\Definition\\Builder\\TreeBuilder',
-            $treebuilder
+            $treeBuilder
         );
     }
 }
