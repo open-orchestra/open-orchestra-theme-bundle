@@ -20,8 +20,9 @@ class BundlePathPackage extends Package
     protected $bundleDir;
 
     /**
-     * (non-PHPdoc)
-     * @see Symfony\Component\Templating\Asset\PathPackage::getUrl
+     * @param string $path
+     *
+     * @return string
      */
     public function getUrl($path)
     {
