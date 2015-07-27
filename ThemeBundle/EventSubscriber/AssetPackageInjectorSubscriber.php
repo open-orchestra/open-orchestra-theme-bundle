@@ -51,6 +51,7 @@ class AssetPackageInjectorSubscriber implements EventSubscriberInterface
     {
         return array(
             KernelEvents::REQUEST => 'onKernelRequest',
+            KernelEvents::EXCEPTION => 'onKernelRequest',
         );
     }
 }
