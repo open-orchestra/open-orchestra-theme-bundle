@@ -47,6 +47,7 @@ class AssetPackageInjectorSubscriberTest extends \PHPUnit_Framework_TestCase
     public function testEventSubscribed()
     {
         $this->assertArrayHasKey(KernelEvents::REQUEST, $this->injector->getSubscribedEvents());
+        $this->assertArrayHasKey(KernelEvents::EXCEPTION, $this->injector->getSubscribedEvents());
         $this->assertTrue(method_exists($this->injector, 'onKernelRequest'));
     }
 
