@@ -22,7 +22,6 @@
         "bin-dir" : "bin"
     },
     "autoload": {
-        "psr-0": { "OpenOrchestra\\ThemeBundle": "" }
-    },
-    "target-dir": "OpenOrchestra"
+        "psr-4": { "OpenOrchestra\\ThemeBundle\\": "ThemeBundle/" }
+    }
 }
