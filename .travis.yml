@@ -5,6 +5,10 @@ php:
 
 sudo: false
 
+cache:
+  directories:
+    - ~/.composer/cache
+
 install:
   - composer install --prefer-dist --no-progress
 
