@@ -2,13 +2,14 @@
 
 namespace OpenOrchestra\ThemeBundle\Tests\Asset\Package;
 
+use OpenOrchestra\BaseBundle\Tests\AbstractTest\AbstractBaseTestCase;
 use OpenOrchestra\ThemeBundle\Asset\Package\BundlePathPackage;
 use Phake;
 
 /**
  * Unit tests of BundlePathPackage
  */
-class BundlePathPackageTest extends \PHPUnit_Framework_TestCase
+class BundlePathPackageTest extends AbstractBaseTestCase
 {
     /**
      * @var BundlePathPackage

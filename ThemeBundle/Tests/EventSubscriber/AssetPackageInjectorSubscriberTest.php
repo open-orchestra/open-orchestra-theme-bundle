@@ -2,6 +2,7 @@
 
 namespace OpenOrchestra\ThemeBundle\Tests\EventSubscriber;
 
+use OpenOrchestra\BaseBundle\Tests\AbstractTest\AbstractBaseTestCase;
 use OpenOrchestra\ThemeBundle\EventSubscriber\AssetPackageInjectorSubscriber;
 use Phake;
 use Symfony\Component\Asset\Packages;
@@ -10,7 +11,7 @@ use Symfony\Component\HttpKernel\KernelEvents;
 /**
  * AssetPackageInjectorSubscriberTest class
  */
-class AssetPackageInjectorSubscriberTest extends \PHPUnit_Framework_TestCase
+class AssetPackageInjectorSubscriberTest extends AbstractBaseTestCase
 {
     /**
      * @var AssetPackageInjectorSubscriber

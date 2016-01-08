@@ -2,13 +2,14 @@
 
 namespace OpenOrchestra\ThemeBundle\Tests\Form\Type;
 
+use OpenOrchestra\BaseBundle\Tests\AbstractTest\AbstractBaseTestCase;
 use OpenOrchestra\ThemeBundle\Form\Type\ThemeChoiceType;
 use Phake;
 
 /**
  * ThemeChoiceTypeTest class
  */
-class ThemeChoiceTypeTest extends \PHPUnit_Framework_TestCase
+class ThemeChoiceTypeTest extends AbstractBaseTestCase
 {
     protected $themeChoiceType;
 
