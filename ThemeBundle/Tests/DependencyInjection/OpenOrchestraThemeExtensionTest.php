@@ -2,13 +2,14 @@
 
 namespace OpenOrchestra\ThemeBundle\Tests\DependencyInjection;
 
+use OpenOrchestra\BaseBundle\Tests\AbstractTest\AbstractBaseTestCase;
 use \OpenOrchestra\ThemeBundle\DependencyInjection\OpenOrchestraThemeExtension;
 use Phake;
 
 /**
  * OpenOrchestraThemeExtensionTest class
  */
-class OpenOrchestraThemeExtensionTest extends \PHPUnit_Framework_TestCase
+class OpenOrchestraThemeExtensionTest extends AbstractBaseTestCase
 {
     public function testLoad()
     {

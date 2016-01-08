@@ -2,12 +2,13 @@
 
 namespace OpenOrchestra\ThemeBundle\Tests\DependencyInjection;
 
+use OpenOrchestra\BaseBundle\Tests\AbstractTest\AbstractBaseTestCase;
 use \OpenOrchestra\ThemeBundle\DependencyInjection\Configuration;
 
 /**
  * ConfigurationTest class
  */
-class ConfigurationTest extends \PHPUnit_Framework_TestCase
+class ConfigurationTest extends AbstractBaseTestCase
 {
     public function testGetConfigTreeBuilder()
     {

@@ -2,13 +2,14 @@
 
 namespace OpenOrchestra\ThemeBundle\Tests\Twig;
 
+use OpenOrchestra\BaseBundle\Tests\AbstractTest\AbstractBaseTestCase;
 use OpenOrchestra\ThemeBundle\Twig\OpenOrchestraExtension;
 use Phake;
 
 /**
  * OpenOrchestraExtensionTest class
  */
-class OpenOrchestraExtensionTest extends \PHPUnit_Framework_TestCase
+class OpenOrchestraExtensionTest extends AbstractBaseTestCase
 {
     /**
      * @var OpenOrchestraExtension
