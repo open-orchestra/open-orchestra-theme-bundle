@@ -2,9 +2,11 @@
 
 namespace OpenOrchestra\ThemeBundle\EventSubscriber;
 
+use OpenOrchestra\ThemeBundle\Asset\Package\BundlePathPackage;
 use Symfony\Component\Asset\Packages;
 use Symfony\Component\Asset\VersionStrategy\VersionStrategyInterface;
-use OpenOrchestra\ThemeBundle\Asset\Package\BundlePathPackage;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -14,22 +16,27 @@ use Symfony\Component\HttpKernel\KernelInterface;
  *
  * Add all the bundles to the custom Path generator
  */
-class AssetPackageInjectorSubscriber implements EventSubscriberInterface
+class AssetPackageInjectorSubscriber implements ContainerAwareInterface, EventSubscriberInterface
 {
+    use ContainerAwareTrait;
+
     protected $kernel;
     protected $assetsPackages;
-    protected $versionStrategy;
+    protected $defaultVersionStrategy;
 
     /**
      * @param KernelInterface          $kernel
      * @param Packages                 $assetPackages
      * @param VersionStrategyInterface $versionStrategy
      */
-    public function __construct(KernelInterface $kernel, Packages $assetPackages, VersionStrategyInterface $versionStrategy)
-    {
+    public function __construct(
+        KernelInterface $kernel,
+        Packages $assetPackages,
+        VersionStrategyInterface $defaultVersionStrategy
+    ) {
         $this->kernel = $kernel;
         $this->assetsPackages = $assetPackages;
-        $this->versionStrategy = $versionStrategy;
+        $this->defaultVersionStrategy = $defaultVersionStrategy;
     }
 
     /**
@@ -38,7 +45,7 @@ class AssetPackageInjectorSubscriber implements EventSubscriberInterface
     public function onKernelRequest()
     {
         foreach ($this->kernel->getBundles() as $bundle) {
-            $bundlePathPackage = new BundlePathPackage($this->versionStrategy);
+            $bundlePathPackage = new BundlePathPackage($this->getVersionStrategy());
             $bundlePathPackage->setBundlePath($bundle->getName());
             $this->assetsPackages->addPackage($bundle->getName(), $bundlePathPackage);
         }
@@ -53,5 +60,17 @@ class AssetPackageInjectorSubscriber implements EventSubscriberInterface
             KernelEvents::REQUEST => 'onKernelRequest',
             KernelEvents::EXCEPTION => array('onKernelRequest', 100),
         );
+    }
+
+    /**
+     * Returns the version strategy to use.
+     *
+     * @return VersionStrategyInterface
+     */
+    protected function getVersionStrategy()
+    {
+        return $this->container->has('assets._version__default')
+            ? $this->container->get('assets._version__default')
+            : $this->defaultVersionStrategy;
     }
 }

@@ -21,5 +21,7 @@ services:
             - @kernel
             - @assets.packages
             - @assets.empty_version_strategy
+        calls:
+            - [setContainer, [@service_container]]
         tags:
             - { name: kernel.event_subscriber }
