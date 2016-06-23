@@ -10,6 +10,7 @@ cache:
     - ~/.composer/cache
 
 install:
+  - export COMPOSER_ROOT_VERSION=1.1.x-dev
   - composer install --prefer-dist --no-progress
 
 script: ./bin/phpunit
