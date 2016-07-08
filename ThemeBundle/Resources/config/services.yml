@@ -1,14 +1,18 @@
-services:
+parameters:
+    open_orchestra_theme.type.theme_choice.class: OpenOrchestra\ThemeBundle\Form\Type\ThemeChoiceType
+    ppen_orchestra_theme.twig_extension.open_orchestra.class: OpenOrchestra\ThemeBundle\Twig\OpenOrchestraExtension
+    open_orchestra_theme.subscriber.asset_package_injector.class: OpenOrchestra\ThemeBundle\EventSubscriber\AssetPackageInjectorSubscriber
 
+services:
     open_orchestra_theme.type.theme_choice:
-        class: OpenOrchestra\ThemeBundle\Form\Type\ThemeChoiceType
+        class: '%open_orchestra_theme.type.theme_choice.class%'
         arguments:
             - '%open_orchestra_theme.themes%'
         tags:
             - { name: form.type, alias: orchestra_theme_choice }
 
     open_orchestra_theme.twig_extension.open_orchestra:
-        class: OpenOrchestra\ThemeBundle\Twig\OpenOrchestraExtension
+        class: '%ppen_orchestra_theme.twig_extension.open_orchestra.class%'
         arguments:
             - '@templating.helper.assets'
             - '%open_orchestra_theme.themes%'
@@ -16,7 +20,7 @@ services:
             - { name: twig.extension }
 
     open_orchestra_theme.subscriber.asset_package_injector:
-        class: OpenOrchestra\ThemeBundle\EventSubscriber\AssetPackageInjectorSubscriber
+        class: '%open_orchestra_theme.subscriber.asset_package_injector.class%'
         arguments:
             - '@kernel'
             - '@assets.packages'
