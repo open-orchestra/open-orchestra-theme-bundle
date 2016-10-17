@@ -24,6 +24,6 @@ services:
         arguments:
             - '@kernel'
             - '@assets.packages'
-            - '@assets.empty_version_strategy'
+            - "@=container.has('assets._version__default') ? service('assets._version__default') : service('assets.empty_version_strategy')"
         tags:
             - { name: kernel.event_subscriber }
