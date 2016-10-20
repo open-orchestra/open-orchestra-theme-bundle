@@ -19,11 +19,14 @@ services:
         tags:
             - { name: twig.extension }
 
+    open_orchestra_theme.subscriber.assets.empty_version_strategy:
+        alias: assets.empty_version_strategy
+
     open_orchestra_theme.subscriber.asset_package_injector:
         class: '%open_orchestra_theme.subscriber.asset_package_injector.class%'
         arguments:
             - '@kernel'
             - '@assets.packages'
-            - "@=container.has('assets._version__default') ? service('assets._version__default') : service('assets.empty_version_strategy')"
+            - "@=container.has('assets._version__default') ? service('assets._version__default') : service('open_orchestra_theme.subscriber.assets.empty_version_strategy')"
         tags:
             - { name: kernel.event_subscriber }
